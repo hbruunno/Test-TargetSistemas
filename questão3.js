@@ -17,8 +17,8 @@ readFile('dados.json', 'utf8', (err, data) => {
     //conta os dias acima da média mensal
     const diasAcimaMedia = faturamentoFiltrado.filter(valor => valor > mediaMensal).length;
 
-    console.log("Menor faturamento diario:", menorFaturamento.toFixed(2));
-    console.log("Maior faturamento diario:", maiorFaturamento.toFixed(2));
+    console.log("Menor faturamento diario:", menorFaturamento);
+    console.log("Maior faturamento diario:", maiorFaturamento);
     console.log("Número de dias acima da média mensal:", diasAcimaMedia);
 });
 
