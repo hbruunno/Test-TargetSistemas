@@ -4,8 +4,7 @@ readFile('dados.json', 'utf8', (err, data) => {
 
     const faturamentoMensal = JSON.parse(data);
 
-    //filro dos valores maior que zero
-    const faturamentoFiltrado = faturamentoMensal.filter(item => item.valor > 0).map(item => item.valor);
+    const faturamentoFiltrado = faturamentoMensal.map(item => item.valor);
 
     //calcula o menor e maior faturamento
     const menorFaturamento = Math.min(...faturamentoFiltrado);
@@ -22,4 +21,4 @@ readFile('dados.json', 'utf8', (err, data) => {
     console.log("Número de dias acima da média mensal:", diasAcimaMedia);
 });
 
-// para rodar o programa: node questão3.js
+// Para rodar o programa, abra o terminal e digite: node questão3.js
